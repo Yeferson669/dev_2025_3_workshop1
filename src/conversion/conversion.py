@@ -111,7 +111,11 @@ class Conversion:
             binario_a_decimal("1010") -> 10
             binario_a_decimal("11111111") -> 255
         """
-        pass
+        decimal = 0
+        longitud = len(binario)
+        for i in range(longitud):
+            decimal += int(binario[i]) * (2 ** (longitud - i - 1))
+        return decimal
     
     def decimal_a_romano(self, numero):
         """
