@@ -116,7 +116,13 @@ class Magic:
         Returns:
             list: Lista de listas que representa el triángulo de Pascal
         """
-        pass
+        if n < 2:
+            return False
+        suma_divisores = 0
+        for i in range(1, n):
+            if n % i == 0:
+                suma_divisores += i
+        return suma_divisores == ns
     
     def factorial(self, n):
         """
