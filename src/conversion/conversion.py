@@ -15,7 +15,8 @@ class Conversion:
             celsius_a_fahrenheit(0) -> 32.0
             celsius_a_fahrenheit(100) -> 212.0
         """
-        pass
+        fahrenheit = (celsius * 9/5) + 32
+        return fahrenheit
     
     def fahrenheit_a_celsius(self, fahrenheit):
         """
