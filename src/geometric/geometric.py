@@ -165,7 +165,7 @@ class Geometria:
         Returns:
             float: Área del hexágono regular
         """
-        pass
+        return 5 * lado
     
     def perimetro_hexagono_regular(self, lado):
         """
