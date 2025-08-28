@@ -206,4 +206,23 @@ class Magic:
         Returns:
             bool: True si es un cuadrado mágico, False en caso contrario
         """
-        pass
+        n = len(matriz)
+        if any(len(fila) != n for fila in matriz):
+            return False 
+
+        suma_objetivo = sum(matriz[0])
+
+        for fila in matriz:
+            if sum(fila) != suma_objetivo:
+                return False
+
+        for col in range(n):
+            if sum(matriz[f][col] for f in range(n)) != suma_objetivo:
+                return False
+
+        if sum(matriz[i][i] for i in range(n)) != suma_objetivo:
+            return False
+        if sum(matriz[i][n-1-i] for i in range(n)) != suma_objetivo:
+            return False
+
+        return True
