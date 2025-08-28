@@ -39,7 +39,7 @@ class Logica:
         Returns:
             bool: Resultado de NOT a
         """
-        pass
+        return not a
     
     def XOR(self, a, b):
         """
