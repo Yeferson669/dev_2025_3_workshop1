@@ -270,7 +270,8 @@ class Geometria:
         Returns:
             float: Distancia entre los dos puntos
         """
-        pass
+        pi = 3.1416
+        return 2 * pi * radio * (radio + altura)
     
     def punto_medio(self, x1, y1, x2, y2):
         """
