@@ -106,7 +106,11 @@ class Games:
             generar_combinacion_mastermind(4, ["rojo", "azul", "verde"]) 
             -> ["rojo", "azul", "rojo", "verde"]
         """
-        pass
+        combinacion = []
+        n_colores = len(colores_disponibles)
+        for i in range(longitud):
+            combinacion.append(colores_disponibles[i % n_colores])
+        return combinacion
     
     def validar_movimiento_torre_ajedrez(self, desde_fila, desde_col, hasta_fila, hasta_col, tablero):
         """
