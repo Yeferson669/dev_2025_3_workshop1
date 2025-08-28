@@ -131,7 +131,19 @@ class Conversion:
             decimal_a_romano(9) -> "IX"
             decimal_a_romano(1994) -> "MCMXCIV"
         """
-        pass
+        if not (1 <= numero <= 3999):
+            raise ValueError("El número debe estar entre 1 y 3999")
+        
+        valores = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+        simbolos = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+        
+        romano = ""
+        num = numero
+        for i in range(len(valores)):
+            while num >= valores[i]:
+                romano += simbolos[i]
+                num -= valores[i]
+        return romano
     
     def romano_a_decimal(self, romano):
         """
