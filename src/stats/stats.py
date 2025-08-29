@@ -124,4 +124,6 @@ class Stats:
         Ejemplo:
             rango([1, 5, 3, 9, 2]) -> 8
         """
-        pass
+        if not numeros:
+            return 0
+        return max(numeros) - min(numeros)
