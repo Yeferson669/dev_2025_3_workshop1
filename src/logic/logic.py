@@ -78,7 +78,7 @@ class Logica:
         Returns:
             bool: Resultado de a NOR b
         """
-        return not (a and b)
+        return not (a or b)
     
     def XNOR(self, a, b):
         """
