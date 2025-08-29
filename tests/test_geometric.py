@@ -191,13 +191,13 @@ class TestGeometria:
         # Test con valores negativos
         assert self.geometria.ecuacion_recta(-1, -2, 2, 4) == (6, -3, 0)
         # Test con línea horizontal
-        assert self.geometria.ecuacion_recta(1, 5, 5, 5) == (0, 1, -5)
+        assert self.geometria.ecuacion_recta(1, 5, 5, 5) == (0, -4, 20)# error no es (0, 1, -5)
     
     def test_area_poligono_regular(self):
         # Test con triángulo regular
         assert round(self.geometria.area_poligono_regular(3, 10, 2.89), 2) == 43.35
         # Test con cuadrado
-        assert self.geometria.area_poligono_regular(4, 5, 2.5) == 50
+        assert self.geometria.area_poligono_regular(4, 5, 2.5) == 25 #error no es 50
         # Test con pentágono
         assert round(self.geometria.area_poligono_regular(5, 6, 4.1), 2) == 61.5
     
