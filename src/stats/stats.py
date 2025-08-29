@@ -57,7 +57,17 @@ class Stats:
         Ejemplo:
             moda([1, 2, 2, 3, 3, 3]) -> 3
         """
-        pass
+        if not numeros:
+            return None
+
+        frecuencia = {}
+        for num in numeros:
+            frecuencia[num] = frecuencia.get(num, 0) + 1
+
+        max_frecuencia = max(frecuencia.values())
+        for num in numeros:
+            if frecuencia[num] == max_frecuencia:
+                return num
     
     def desviacion_estandar(self, numeros):
         """
