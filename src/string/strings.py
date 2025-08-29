@@ -79,7 +79,10 @@ class Strings:
         Returns:
             bool: True si son anagramas, False en caso contrario
         """
-        pass
+        t1 = texto1.replace(" ", "").lower()
+        t2 = texto2.replace(" ", "").lower()
+        
+        return sorted(t1) == sorted(t2)
     
     def contar_palabras(self, texto):
         """
