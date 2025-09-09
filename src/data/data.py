@@ -9,7 +9,7 @@ class Data:
         Invierte el orden de los elementos en una lista sin usar reversed() o lista[::-1].
         
         Args:
-            lista (list): Lista a invertir
+            lista (list): Lista a invertir.
             
         Returns:
             list: Lista con los elementos en orden inverso
